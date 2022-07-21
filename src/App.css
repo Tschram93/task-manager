@@ -6,7 +6,24 @@
   padding: 0;
 }
 
+input {
+  margin-right: 5px;
+  padding: 2px 0px;
+}
+
 .App {
   text-align: center;
 }
 
+.addTask {
+
+}
+
+.list {
+padding: 2px 0px;
+}
+
+#taskButton {
+  margin-left: 5px;
+  padding: 2px 3px;
+}
