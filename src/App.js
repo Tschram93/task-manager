@@ -14,6 +14,13 @@ function App() {
 		setTaskList(newTaskList); // Taking the new state value and updating them;
 	};
 
+	// Delete Task
+	const deleteTask = (taskName) => {
+		const newTodoList = taskList.filter( task => task === taskName ? false : true);
+		
+		setTaskList(newTodoList);
+	}
+
 	const handleChange = (event) => {
 		setNewTask(event.target.value);
 	};
@@ -38,7 +45,9 @@ and add it as a string value */
 					<div>
 						{/* div to group the h1 and button (delete) together */}
 						<h1>{task}</h1>
-						<button className='deleteButton'>
+						<button
+						className='deleteButton'
+						onClick={() => deleteTask(task)} >
 							<TiIcons.TiDeleteOutline />
 						</button>
 						{/* Delete Button going to use react-icons. */}
