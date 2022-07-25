@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import * as TiIcons from 'react-icons/ti';
 import './App.css';
 
 function App() {
@@ -10,8 +11,7 @@ function App() {
 
 	const addTask = (event) => {
 		const newTaskList = [...taskList, newTask]; // combining task array string from input;
-		setTaskList(newTaskList); // Taking the new state values and updating them;
-    console.log(newTaskList);
+		setTaskList(newTaskList); // Taking the new state value and updating them;
 	};
 
 	const handleChange = (event) => {
@@ -33,7 +33,17 @@ and add it as a string value */
 				</button>
 			</div>
 			<div className='list'>
-				{taskList.map( task => <h1>{task}</h1>)}
+				{/* using map to output each value in taskList as an h1 */}
+				{taskList.map((task) => (
+					<div>
+						{/* div to group the h1 and button (delete) together */}
+						<h1>{task}</h1>
+						<button className='deleteButton'>
+							<TiIcons.TiDeleteOutline />
+						</button>
+						{/* Delete Button going to use react-icons. */}
+					</div>
+				))}
 			</div>
 		</div>
 	);
