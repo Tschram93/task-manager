@@ -6,22 +6,38 @@
   padding: 0;
 }
 
+.container
+h1 {
+  color: #E7EAEF;
+  margin-right: 10px;
+}
+
 input {
   margin-right: 5px;
   padding: 2px 0px;
 }
 
 .App {
+  background-color: #217074;
   text-align: center;
 }
 
 .addTask {
+  
+}
 
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .deleteButton {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
   color: red;
-  font-size: 1.25rem;
+  cursor: pointer;
+  font-size: 2rem;
   padding: 4px 4px 0px 4px;
 }
 
@@ -30,6 +46,18 @@ padding: 2px 0px;
 }
 
 #taskButton {
+  background-color: #E7EAEF;
+  border-radius: 5px;
+  font-family: 'Nanum Gothic';
+  font-weight: 800;
   margin-left: 5px;
   padding: 2px 3px;
+}
+
+#input-box {
+  background-color: #EDC5AB;
+  color: #217074;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  padding-left: 5px;
 }

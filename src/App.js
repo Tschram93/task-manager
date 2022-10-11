@@ -1,6 +1,9 @@
+import Header from './Components/Header';
 import { useState } from 'react';
 import * as TiIcons from 'react-icons/ti';
 import './App.css';
+
+// Taking break 26:01 ReactJS Course [5] Todo List Tutorial
 
 function App() {
 	// Want the tasks put into an array, which we are using useState for
@@ -17,23 +20,23 @@ function App() {
 	// Delete Task
 	const deleteTask = (taskName) => {
 		const newTodoList = taskList.filter( task => task === taskName ? false : true);
-		
+
 		setTaskList(newTodoList);
 	}
 
 	const handleChange = (event) => {
 		setNewTask(event.target.value);
 	};
-	{
+	
 		/* created function to handle the input 
 and add it as a string value */
-	}
+	
 
 	return (
 		<div className='App'>
-			<h1>Task Manager</h1>
+			<Header />
 			<div className='addTask'>
-				<input onChange={handleChange} />{' '}
+				<input id='input-box' onChange={handleChange} />{' '}
 				{/* Whenever typed within input we update the state of newTask */}
 				<button onClick={addTask} id='taskButton'>
 					Add Task
@@ -42,7 +45,7 @@ and add it as a string value */
 			<div className='list'>
 				{/* using map to output each value in taskList as an h1 */}
 				{taskList.map((task) => (
-					<div>
+					<div className='container'>
 						{/* div to group the h1 and button (delete) together */}
 						<h1>{task}</h1>
 						<button
